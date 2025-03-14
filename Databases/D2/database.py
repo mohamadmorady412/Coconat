@@ -11,11 +11,11 @@ logger = logging.getLogger(__name__)
 
 load_dotenv()
 
-DATABASE_URL = os.getenv("DB_URL", "mysql+asyncmy://user:password@main_host:3306/db")
+DATABASE_URL = os.getenv("DB_URL")
 
 SHARDS = {
-    'shard_1': os.getenv("SHARD_1_URL", "mysql+asyncmy://user:password@shard1:3306/db"),
-    'shard_2': os.getenv("SHARD_2_URL", "mysql+asyncmy://user:password@shard2:3306/db")
+    'shard_1': os.getenv("SHARD_1_URL"),
+    'shard_2': os.getenv("SHARD_2_URL")
 }
 
 try:
